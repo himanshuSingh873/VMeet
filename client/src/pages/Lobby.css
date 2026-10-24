@@ -1,0 +1,63 @@
+.lobby {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: #eef2f7;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #14213d;
+}
+
+.lobby-card {
+  width: 100%;
+  max-width: 960px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 28px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(20, 33, 61, 0.1);
+}
+
+.lobby-preview {
+  aspect-ratio: 4 / 3;
+  background: #14213d;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.lobby-preview video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1); /* mirror, like a real camera preview */
+}
+
+.lobby-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.lobby-form h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.lobby-sub {
+  margin: 0;
+  color: #5b6b82;
+  line-height: 1.5;
+}
+
+@media (max-width: 760px) {
+  .lobby-card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 18px;
+  }
+}
